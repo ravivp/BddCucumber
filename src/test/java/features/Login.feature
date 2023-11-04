@@ -3,7 +3,7 @@ Feature:Login functionality for opencart e-commerce website
   Background:
     Given I launch the application
 
-@smoke
+#@smoke
   Scenario: Successful login with valid credentials
     Given User should on login page
     When I have entered a valid username and password
@@ -23,7 +23,7 @@ Feature:Login functionality for opencart e-commerce website
       | invalid@gmail.com | invalidpassword | Warning: No match for E-Mail Address and/or Password. |
       | valid@gmail.com   | password        | Warning: No match for E-Mail Address and/or Password. |
 
-  @smoke
+#  @smoke
   Scenario: Navigating forgotten password page
     Given User should on login page
     When I click on forgotten password link

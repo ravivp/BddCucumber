@@ -1,18 +1,20 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name = "Goodyear.com" >
-    <test name = "BDD framework" >
-<!--        <parameter name="browser" value="chrome"></parameter>-->
+<suite name = "Goodyear.com"  parallel="tests" verbose="10">
+    <test name = "chrome">
+   <parameter name="browserType" value="chrome"></parameter>
         <classes>
-            <class name = "runner.TestRunner" />
+<!--            <class name = "runner.TestRunner" />-->
+            <class name = "runner.ParrallelRunner" />
         </classes>
     </test>
-<!--    <test name="Edge test">-->
-<!--        -->
-<!--        <parameter name="browser" value="edge"></parameter>-->
-<!--        <classes>-->
-<!--            -->
+    <test name="Edge test">
+
+        <parameter name="browserType" value="edge"></parameter>
+        <classes>
+
 <!--            <class name="runner.TestRunner"></class>-->
-<!--        </classes>-->
-<!--    </test>-->
+            <class name = "runner.ParrallelRunner" />
+        </classes>
+    </test>
     
 </suite>
