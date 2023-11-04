@@ -2,7 +2,7 @@ Feature: Verify Homepage components for opencart e-commerce website
 
   Background:
     Given I launch the application
- @RegressionTesting
+# @RegressionTesting
   Scenario: Verify various components on home page
     Given User on Home page
     Then Verify headers components on home page

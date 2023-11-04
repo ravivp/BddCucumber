@@ -9,6 +9,7 @@ import io.cucumber.java.en.When;
 import org.testng.Assert;
 import utilities.ConfigReader;
 import utilities.DriverFactory;
+import utilities.ParrallelPropertyReader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,8 +27,13 @@ public class loginPageStepDef {
     @Given("I launch the application")
     public void i_launch_the_application() throws InterruptedException {
 
-        DriverFactory.getDriver().get(configReader.initProp().getProperty("url"));
+//        DriverFactory.getDriver().get(configReader.initProp().getProperty("url"));
+//        Thread.sleep(3000);
+
+
+        DriverFactory.getDriver().get(ParrallelPropertyReader.properties.get().getProperty("url"));
         Thread.sleep(3000);
+
 
     }
     @Given("I have entered a valid username and password")
